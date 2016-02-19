@@ -1,0 +1,703 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/abdn/socialcomp/sc-prov"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/abdn/socialcomp/sc-prov">
+    <Prefix name="" IRI="http://www.semanticweb.org/owl/owlapi/turtle#"/>
+    <Prefix name="sp" IRI="http://spinrdf.org/sp#"/>
+    <Prefix name="ns1" IRI="http://web.resource.org/cc/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="spl" IRI="http://spinrdf.org/spl#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="prov" IRI="http://www.w3.org/ns/prov#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="spin" IRI="http://spinrdf.org/spin#"/>
+    <Prefix name="dcterm" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="p-plan" IRI="http://purl.org/net/p-plan#"/>
+    <Prefix name="SC-PROV-0" IRI="http://example.org/SC-PROV-0.1#"/>
+    <Import>http://purl.org/net/p-plan#</Import>
+    <Import>http://www.w3.org/ns/prov-o-20130430</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SC-PROV-O: An ontology for describing provenance of social computation</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="ns1:license"/>
+        <IRI>http://creativecommons.org/licenses/by-sa/3.0/</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="&xsd;string">0.0.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterm:rights"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Copyright © 2015 Milan Markovic</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="SC-PROV-0:Action"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="SC-PROV-0:Condition"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="SC-PROV-0:EvaluationContext"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="SC-PROV-0:Imposition"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="SC-PROV-0:Incentive"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="SC-PROV-0:Input"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="SC-PROV-0:Output"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="SC-PROV-0:ParameterCollection"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="SC-PROV-0:Purpose"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="SC-PROV-0:RoleSpec"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="SC-PROV-0:SocialActorSpec"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:correspondsToActor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hadCondition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hadEvaluationSubject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hadParameterCollection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hadResult"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hasIncentive"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hasParameter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hasRoleSpec"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:isConditionOfPlan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:isImposedOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:isPurposeInPlan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:performs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedAction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedImposition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedInput"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedOutput"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedPurpose"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:requests"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:target"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="SC-PROV-0:Action"/>
+        <Class abbreviatedIRI="SC-PROV-0:Purpose"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="SC-PROV-0:Condition"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="SC-PROV-0:EvaluationContext"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="SC-PROV-0:Imposition"/>
+        <Class abbreviatedIRI="SC-PROV-0:Purpose"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="SC-PROV-0:Incentive"/>
+        <Class abbreviatedIRI="p-plan:Variable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="SC-PROV-0:Input"/>
+        <Class abbreviatedIRI="SC-PROV-0:Purpose"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="SC-PROV-0:Output"/>
+        <Class abbreviatedIRI="SC-PROV-0:Purpose"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="SC-PROV-0:ParameterCollection"/>
+        <Class abbreviatedIRI="prov:Collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="SC-PROV-0:Purpose"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="SC-PROV-0:RoleSpec"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="SC-PROV-0:SocialActorSpec"/>
+        <Class abbreviatedIRI="p-plan:Variable"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI="SC-PROV-0:Action"/>
+        <Class abbreviatedIRI="SC-PROV-0:Imposition"/>
+        <Class abbreviatedIRI="SC-PROV-0:Input"/>
+        <Class abbreviatedIRI="SC-PROV-0:Output"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="SC-PROV-0:Condition"/>
+        <Class abbreviatedIRI="p-plan:Step"/>
+        <Class abbreviatedIRI="p-plan:Variable"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="SC-PROV-0:Incentive"/>
+        <Class abbreviatedIRI="SC-PROV-0:SocialActorSpec"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:isPurposeInPlan"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedAction"/>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedPurpose"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedImposition"/>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedPurpose"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedInput"/>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedPurpose"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedOutput"/>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedPurpose"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:correspondsToActor"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hadCondition"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hadEvaluationSubject"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hadResult"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hasRoleSpec"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:target"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:correspondsToActor"/>
+        <Class abbreviatedIRI="prov:Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hadCondition"/>
+        <Class abbreviatedIRI="SC-PROV-0:EvaluationContext"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hadEvaluationSubject"/>
+        <Class abbreviatedIRI="SC-PROV-0:EvaluationContext"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hadResult"/>
+        <Class abbreviatedIRI="SC-PROV-0:EvaluationContext"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hasIncentive"/>
+        <Class abbreviatedIRI="p-plan:Step"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hasParameter"/>
+        <Class abbreviatedIRI="SC-PROV-0:Condition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hasRoleSpec"/>
+        <Class abbreviatedIRI="SC-PROV-0:Purpose"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:isConditionOfPlan"/>
+        <Class abbreviatedIRI="SC-PROV-0:Condition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:isImposedOn"/>
+        <Class abbreviatedIRI="SC-PROV-0:Condition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:isPurposeInPlan"/>
+        <Class abbreviatedIRI="SC-PROV-0:Purpose"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:performs"/>
+        <Class abbreviatedIRI="SC-PROV-0:SocialActorSpec"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedAction"/>
+        <Class abbreviatedIRI="SC-PROV-0:SocialActorSpec"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedImposition"/>
+        <Class abbreviatedIRI="SC-PROV-0:Condition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedInput"/>
+        <Class abbreviatedIRI="p-plan:Variable"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedOutput"/>
+        <Class abbreviatedIRI="p-plan:Variable"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedPurpose"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="SC-PROV-0:Condition"/>
+            <Class abbreviatedIRI="p-plan:Variable"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:requests"/>
+        <Class abbreviatedIRI="SC-PROV-0:SocialActorSpec"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:target"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="SC-PROV-0:Condition"/>
+            <Class abbreviatedIRI="p-plan:Variable"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:correspondsToActor"/>
+        <Class abbreviatedIRI="SC-PROV-0:SocialActorSpec"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hadCondition"/>
+        <Class abbreviatedIRI="SC-PROV-0:Condition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hadEvaluationSubject"/>
+        <Class abbreviatedIRI="p-plan:Activity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hadResult"/>
+        <Class abbreviatedIRI="p-plan:Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hasIncentive"/>
+        <Class abbreviatedIRI="SC-PROV-0:Incentive"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hasParameter"/>
+        <Class abbreviatedIRI="p-plan:Variable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:hasRoleSpec"/>
+        <Class abbreviatedIRI="SC-PROV-0:RoleSpec"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:isConditionOfPlan"/>
+        <Class abbreviatedIRI="prov:Plan"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:isImposedOn"/>
+        <Class abbreviatedIRI="p-plan:Step"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:isPurposeInPlan"/>
+        <Class abbreviatedIRI="prov:Plan"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:performs"/>
+        <Class abbreviatedIRI="p-plan:Step"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedAction"/>
+        <Class abbreviatedIRI="SC-PROV-0:Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedImposition"/>
+        <Class abbreviatedIRI="SC-PROV-0:Imposition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedInput"/>
+        <Class abbreviatedIRI="SC-PROV-0:Input"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedOutput"/>
+        <Class abbreviatedIRI="SC-PROV-0:Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:qualifiedPurpose"/>
+        <Class abbreviatedIRI="SC-PROV-0:Purpose"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:requests"/>
+        <Class abbreviatedIRI="p-plan:Step"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:target"/>
+        <Class abbreviatedIRI="p-plan:Step"/>
+    </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:performs"/>
+        <ObjectProperty abbreviatedIRI="SC-PROV-0:requests"/>
+    </DisjointObjectProperties>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:Action</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Action is the scope of the expected activity performed by agents that correspond to sc-prov:SocialActorSpec.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:Action</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:Condition</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An sc-prov:Condition defines a state of the world described by a logical state- ment that is used to define a desired state of a particular aspect of a successful step.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:Condition</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Condition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:EvaluationContext</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A concept used to connect the evaluation result of a particular sc-prov:Condition (C1) with a single executed p-plan:Activity corresponding to the step associated with C1.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:EvaluationContext</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Evaluation Context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:Imposition</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Imposition is the subjection of p-plan:Step to the constraints described by sc- prov:Condition.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:Imposition</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Imposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:Incentive</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Incentive is a kind of p-plan:Variable and represents a thing (e.g. monetary value, increased knowledge, etc.) that would be realised by a worker following successful completion of a task.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:Incentive</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Incentive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:Input</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Input describes a specification context in which a p-plan:Variable is expected to be taken as an input for a p-plan:Step.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:Input</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Input</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:Output</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Output describes a specification context in which a p-plan:Variable is expected
+to be produced as an output of a p-plan:Step.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:Output</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Output</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:ParameterCollection</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A kind of prov:Collection which is used to encapsulate the in-
+stances of prov:Entity that were used as parameters to evaluate a particular sc-prov:Condition.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:ParameterCollection</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Parameter Collection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:Purpose</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Purpose is the expected scope of influence of a p-plan:Variable or an sc- prov:Condition on a p-plan:Step.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:Purpose</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Purpose</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:RoleSpec</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A role specification is the function of a variable, a social actor, or a condition in the context of a particular step.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:RoleSpec</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Role Specification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:SocialActorSpec</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An sc-prov:SocialActor is a kind of p-plan:Variable and represents a desired specification of an agent who should be associated with a p-plan:Step in order to perform a non- administrative function in a social computation process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:SocialActorSpec</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Social Actor Specification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:correspondsToActor</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A relation that links a prov:Agent to its expected description captured by sc-prov-o:SocialActorSpec.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:correspondsToActor</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">correspondsToActor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:hadCondition</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A relation that links a specific sc-prov-o:evaluationContext to the sc-prov-o:Condition for which the evaluation was sought for.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:hadCondition</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">hadCondition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:hadEvaluationSubject</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A relation describing that a particular p-plan:Activity captured as
+part of the sc-prov-o:EvaluationContext is the activity for which the condition was evaluated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:hadEvaluationSubject</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">hadActivity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:hadParameterCollection</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A relation that is used to associate an sc-prov:ParameterCollection with an sc-prov:EvaluationContext</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:hadParameterCollection</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">had Parameter Collection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:hadResult</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A relation describing that a particular p-plan:Entity represents the evaluation result of specific condition applicable to the state of the world described by the sc- prov-o:EvaluationContext.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:hadResult</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">hadResult</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:hasIncentive</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">placeholder</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:hasIncentive</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasIncentive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:hasParameter</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">sc-prov:hasParameter is a relation defining that a p-plan:Variable provides a
+parameter value for the sc-prov:Condition.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:hasParameter</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasParameter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:hasRoleSpec</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A relation that links an instance of sc-prov-o:Purpose with a single specifica- tion of the assigned sc-prov-o: RoleSpec.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:hasRoleSpec</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasRoleSpec</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:isConditionOfPlan</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Links an instance of an sc-prov-o:Condition to a specific instance of a p-plan:Plan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:isConditionOfPlan</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isConditionOfPlan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:isImposedOn</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">sc-prov:isImposedOn is a relation defining that an sc-prov:Condition is defined for a p-plan:Step.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:isImposedOn</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isImposedOn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:isPurposeInPlan</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Links an instance of a sc-prov-o:Purpose to a specific instance of a p-plan:Plan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:isPurposeInPlan</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isPurposeInPlan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:performs</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">sc-prov:performs is a relation defining that an sc-prov:socialActor defines a description of an agent that will bear some responsibility for the activity described by p-plan:Step.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:performs</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">performs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:qualifiedAction</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A relation that links an sc-prov-o: SocialActorSpec to the scope of the expected
+activity performed by agents that correspond to such sc-prov-o: SocialActorSpec.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:qualifiedAction</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">qualifiedAction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:qualifiedImposition</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A relation that links an sc-prov-o: Condition to an sc-prov-o: Imposition which
+describes the subjection of a p-plan:Step to the constraints described by the sc-prov:Condition.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:qualifiedImposition</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">qualifiedImposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:qualifiedInput</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A relation that links a p-plan: Variable to the description of the specification context in which a variable is expected to be taken as an input for a step (sc-prov-o: Input).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:qualifiedInput</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">qualifiedInput</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:qualifiedOutput</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A relation that links a p-plan: Variable to the description of the specification context in which a variable is expected to be produced as an output of a step (sc-prov-o: Output).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:qualifiedOutput</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">qualifiedOutput</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:qualifiedPurpose</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A relation that links a p-plan:Variable or an sc-prov:Condition with the descrip-
+tion of their expected scope of influence on a p-plan:Step.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:qualifiedPurpose</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">qualifiedPurpose</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:requests</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">sc-prov:requests is a relation defining that a prov:Agent corresponding to the sc-prov:socialActor description is responsible for existence of the particular p-plan:Step.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:requests</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">requests</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SC-PROV-0:target</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A relation that links an sc-prov-o:Purpose with the subject of its influence, i.e. a p-plan:Step.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SC-PROV-0:target</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">target</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
