@@ -28,7 +28,7 @@
                                            
                                            dcterm:title "SC-PROV-O: An ontology for describing provenance of social computation" ;
                                            
-                                           dcterm:rights "Copyright © 2015 Milan Markovic" ;
+                                           dcterm:rights "Copyright © 2015 University of Aberdeen" ;
                                            
                                            rdfs:isDefinedBy "" ;
                                            
