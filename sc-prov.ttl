@@ -22,9 +22,9 @@
                                            
                                            dcterm:creator "Milan Markovic"^^xsd:string ;
                                            
-                                           dcterm:contributor "Peter Edwards"^^xsd:string ;
+                                           dcterm:creator "Peter Edwards"^^xsd:string ;
                                            
-                                           dcterm:contributor "David Corsar"^^xsd:string ;
+                                           dcterm:creator "David Corsar"^^xsd:string ;
                                            
                                            dcterm:title "SC-PROV-O: An ontology for describing provenance of social computation" ;
                                            
