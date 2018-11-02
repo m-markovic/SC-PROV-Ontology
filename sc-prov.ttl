@@ -16,7 +16,7 @@
 
 <https://w3id.org/abdn/socialcomp/sc-prov> rdf:type owl:Ontology ;
                                            
-                                           dcterm:created "08-30-2015"^^xsd:dateTime ;
+                                           dcterm:created "2015-08-30T00:00:00+00:00"^^xsd:dateTime ;
                                            
                                            owl:versionInfo "1.0.0"^^xsd:string ;
                                            
